@@ -5,9 +5,13 @@ describe('MathChar:', () => {
   const elena = new Daemon('Elena');
   const maxim = new Magician('Maxim');
 
-  test('should return stoned value', () => {
+  test('should return stoned value of true', () => {
     maxim.stoned = true;
     expect(maxim.stoned).toBeTruthy();
+  });
+
+  test('should return stoned value of false', () => {
+    expect(elena.stoned).toBeFalsy();
   });
 
   test('should return attack with stoned correctly', () => {
